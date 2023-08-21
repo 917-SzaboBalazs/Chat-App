@@ -44,7 +44,7 @@ class App extends Component {
   onRoomCreate = (e) => {
     this.setState({ filledForm: true })
 
-    this.client = new W3CWebSocket('ws://35.232.55.46:8000/ws/' + this.state.room + '/'); //gets room_name from the state and connects to the backend server
+    this.client = new W3CWebSocket('ws://35.232.55.46/ws/' + this.state.room + '/'); //gets room_name from the state and connects to the backend server
 
     this.client.onopen = () => {
       console.log("WebSocket Client Connected");
